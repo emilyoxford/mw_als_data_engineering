@@ -1,12 +1,16 @@
 ##### Importing packages #####
 
-import datetime
 import numpy as np
 import pandas as pd
+
+import warnings # already included in Python, no need to install
+warnings.filterwarnings('ignore') # so harmless pandas warning does not print mid-execution
 
 
 
 ##### Loading in data #####
+
+print('Loading data...')
 
 cons_info = pd.read_csv('https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons.csv')
 cons_email = pd.read_csv('https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email.csv')
@@ -15,6 +19,8 @@ cons_ecs = pd.read_csv('https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01
 
 
 ##### Creating "people" file #####
+
+print('Creating people.csv...')
 
 ### Step 1: Join data
 
@@ -63,12 +69,16 @@ people = people.rename(columns = {
 
 # Step 6: Export to CSV
 people.to_csv('people.csv', index = False)
+print('Saving people.csv...')
 
 
 
 ##### Creating "acquistion_facts" file #####
 
-### Step 1: Extract revelent information from "people" dataframe
+print('Creating acquisition_facts.csv...')
+
+
+### Step 1: Extract relevant information from "people" dataframe
 acq_facts = people[['email', 'create_dt']]
 
 
@@ -86,4 +96,7 @@ acq_facts.sort_values('acquisition_date', inplace = True)
 
 
 ### Step 4: Write acq_facts to CSV
+print('Saving acquisition_facts.csv...')
 acq_facts.to_csv('acquisition_facts.csv', index = False)
+
+print('Done!')
