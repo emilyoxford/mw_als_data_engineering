@@ -39,6 +39,7 @@ On a computer with 2 CPUs (1.8 GHz each) and 8 GB RAM, both option 1 and 2 run i
 The code in this repository was written using [Python 3.7.7](https://www.python.org/downloads/release/python-377/). Both the .py and the .ipynb files require the following Python libraries to be installed:
 - [numpy](https://numpy.org/install/) (version used in this repository: 1.19.2)
 - [pandas](https://pandas.pydata.org/docs/getting_started/install.html) (version used in this repository: 1.19.2)
+- [seaborn](https://seaborn.pydata.org/installing.html) (used in [als_data_engineering.ipynb](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/als_data_engineering.ipynb) only - version used in this repository: 0.11.0)
 
 Note that earlier/later versions of Python and these libraries may result in incompatibilities while running the code. If the code breaks, try running with the versions used above.
 
