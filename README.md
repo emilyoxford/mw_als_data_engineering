@@ -4,30 +4,30 @@
 This repository was created for a hiring exercise for MissionWired in summer 2021. In this exercise, data from three separate CSV files on constituent information ([Constituent Information](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons.csv), [Constituent Email Addresses](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email.csv), and [Constituent Subscription Status](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email_chapter_subscription.csv)) are combined to generate two separate files: "people.csv" and "acquisition_facts.csv".
 
 
-See the [original description of the exercise](## Original Description of Exercise) below for the full instructions.
+See the [original description of the exercise](#original-description-of-exercise) below for the full instructions.
 
 ## Files
 This repository contains:
 - 2 executable files:
-    - als_data_engineering.ipynb
-    - als_data_engineering.py
+    - [als_data_engineering.ipynb](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/als_data_engineering.ipynb)
+    - [als_data_engineering.py](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/als_data_engineering.py)
 
 - 2 output files:
-    - people.csv
+    - [people.csv]()
         - Fields:
             - email (str): Primary email address
             - code (str): Source code
             - is_unsub (int): Boolean of whether the email address is subscribed to chap_1. 1 = unsubscribed, 0 = subscribed
             - created_dt (datetime): Person creation datetime
             - updated_dt (datetime): Person updated datetime
-    - acquisition_facts.csv
+    - [acquisition_facts.csv](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/acquisition_facts.csv)
         - Fields:
             - acquisition_date (date): Calendar date of acquisition
             - acquisitions (int): Number of constituents acquired on acquisition_date
 
 ## How to run
-To generate people.csv and acquisition_facts.csv, there are two options:
-1. Open als_data_engineering.ipynb. Run all cells.
+To generate [people.csv](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/people.csv) and [acquisition_facts.csv](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/acquisition_facts.csv), there are two options:
+1. Open [als_data_engineering.ipynb](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/als_data_engineering.ipynb). Run all cells in order.
 - This option is intended for those who wish to understand the process by which the files were created. There are more comprehensive comments on what is being done (and why) at each step, with examples of how the data looks at each step of transformation.
 
 2. From the command line, run "python3 als_data_engineering.py"
@@ -53,7 +53,7 @@ If this process needed to be used multiple times on multiple files regularly, I 
 
 ### Interpretation of "updated_dt" field
 
-The instructions for the "updated_dt" field in "people.csv" were initially unclear to me, as each of the three original CSVs have what I assume is the equivalent field ("modified_dt"), and the "modified_dt" field was different for each instance of constituent, email address, and subscruption in the CSVs.
+The instructions for the "updated_dt" field in [people.csv](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/people.csv) were initially unclear to me, as each of the three original CSVs have what I assume is the equivalent field ("modified_dt"), and the "modified_dt" field was different for each instance of constituent, email address, and subscruption in the CSVs.
 
 I ultimately decided to use the "modified_dt" field from the Constituent Information CSV because it appeared to represent instances of a single constituent's _personal_ information being updated. This interpretation aligned with what I believe was the intention of the "create_dt" field: the datetime that one individual's _personal_ information was added to the dataset.
 
