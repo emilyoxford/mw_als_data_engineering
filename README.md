@@ -1,7 +1,7 @@
 # MissionWired/ALS Data Engineering Exercise
 
 ## Description
-This repository was created for a hiring exercise for MissionWired in summer 2021. In this exercise, data from three separate CSV files on constituent information ([Constituent Information](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons.csv), [Constituent Email Addresses](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email.csv), and [Constituent Subscription Status](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email_chapter_subscription.csv)) are combined to generate two separate files: "people.csv" and "acquisition_facts.csv".
+This repository was created for a hiring exercise for MissionWired in summer 2021. In this exercise, data from three separate CSV files on constituent information ([Constituent Information](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons.csv), [Constituent Email Addresses](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email.csv), and [Constituent Subscription Status](https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email_chapter_subscription.csv)) are combined to generate two separate files: [people.csv](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/people.csv) and [acquisition_facts.csv](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/acquisition_facts.csv).
 
 
 See the [original description of the exercise](#original-description-of-exercise) below for the full instructions.
