@@ -17,7 +17,7 @@ This repository contains:
         - Fields:
             - email (str): Primary email address
             - code (str): Source code
-            - is_unsub (int): Boolean of whether the email address is subscribed to chap_1. 1 = unsubscribed, 0 = subscribed
+            - is_unsub (int): Boolean of whether the email address is subscribed to chapter_id 1. 1 = unsubscribed, 0 = subscribed
             - created_dt (datetime): Person creation datetime
             - updated_dt (datetime): Person updated datetime
     - [acquisition_facts.csv](https://github.com/emilyoxford/mw_als_data_engineering/blob/main/acquisition_facts.csv)
