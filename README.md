@@ -33,6 +33,8 @@ To generate [people.csv](https://github.com/emilyoxford/mw_als_data_engineering/
 2. From the command line, run "python3 als_data_engineering.py"
 - This option is intended for those who want to generate people.csv and acquisition_facts.csv quickly and do not need a more detailed explanation of how the code is intended to work.
 
+On a computer with 2 CPUs (1.8 GHz each) and 8 GB RAM, both option 1 and 2 run in approximately 3-4 minutes. A machine with greater processing power will no doubt run more quickly.
+
 ## Software used
 The code in this repository was written using [Python 3.7.7](https://www.python.org/downloads/release/python-377/). Both the .py and the .ipynb files require the following Python libraries to be installed:
 - [numpy](https://numpy.org/install/) (version used in this repository: 1.19.2)
